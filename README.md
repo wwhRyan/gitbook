@@ -1,7 +1,7 @@
 ## Build Static Website
 
 ```bash
-docker run -v `pwd`/<your book>:/srv/gitbook fellah/gitbook gitbook build . 
+docker run --rm -v `pwd`/<your book>:/srv/gitbook fellah/gitbook gitbook build . 
 ```
 
 # GitBook Image
