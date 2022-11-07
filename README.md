@@ -1,9 +1,15 @@
+## Build Static Website
+
+```bash
+docker run -v `pwd`/<your book>:/srv/gitbook fellah/gitbook gitbook build . 
+```
+
 # GitBook Image
 
 Run container:
 
-```
-$ docker run -p 80:4000 -v /srv/gitbook fellah/gitbook
+```bash
+docker run -p 4000:4000 -v `pwd`/<your book>:/srv/gitbook fellah/gitbook
 ```
 
 `4000` – GitBook default service port.
@@ -11,13 +17,6 @@ $ docker run -p 80:4000 -v /srv/gitbook fellah/gitbook
 `35729` – Live reload server port.
 
 `/srv/gitbook` – Default working directory for GitBook container.
-
-
-## Build Static Website
-
-```
-$ docker run -v /srv/gitbook -v /srv/html fellah/gitbook gitbook build . /srv/html
-```
 
 ## Links
 
